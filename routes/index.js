@@ -222,14 +222,14 @@ function sendEmailVerification (chat, email, id) {
     models.User
         .update({token: id}, {where: {chatId: chat, email: email}})
         .spread((user, created) => {
-            const link = "http://localhost:3000"+ "/verify?id=" + id + "&email="+ email;
+            const link = "http://34.245.133.13"+ "/verify?id=" + id + "&email="+ email;
             const message = {
                 to: email,
                 from: 'usinvestors@notallowed.com',
                 subject: 'Email verification Usinvestorsnotallowed',
                 text: 'Email verification Usinvestorsnotallowed',
-                html: '<strong>Hello,<br> Please Click on the link to verify your email.<br>' +
-                '<a href=' + link + '>Click here to verify</a></strong>',
+                html: '<strong>Thank you for subscribing to TOKEN news.</strong><br><br> <p>Please Click on the link to verify your email.<br>' +
+                '<a href=' + link + '>Click here to verify</a></p>',
             };
             sgMail.send(message);
         });
@@ -279,7 +279,7 @@ router.get('/verify',function(req,res){
     // console.log(req.protocol+":/"+req.get('host'));
     // console.log(req);
     // console.log(req.query.email);
-    if((req.protocol+"://"+req.get('host')) == ("http://localhost:3000"))
+    if((req.protocol+"://"+req.get('host')) == ("http://34.245.133.13"))
     {
         console.log("Domain is matched. Information is from Authentic email");
         models.User.findOne({ where: {email: req.query.email} }).then(project => {

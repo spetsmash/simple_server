@@ -1,10 +1,10 @@
 var questions = {
     0: {
-        title: 'Welcome to usinvestorsnotallowed! Thank you for being here and supporting us to help democratize fund management! 🙏 \n' +
+        title: 'Welcome to TOKEN! Thank you for being here and supporting us to help democratize fund management! 🙏 \n' +
         'First, let us ask you a couple of questions to verify that you aren’t a bot.\n' +
         'What’s the name of our company? 🤔',
         buttons: [
-            [{text: 'Usinvestorsnotallowed', callback_data: '0_1'}],
+            [{text: 'TOKEN', callback_data: '0_1'}],
             [{text: 'Bitcoin', callback_data: '0_2'}],
             [{text: 'Ethereum', callback_data: '0_3'}],
         ],

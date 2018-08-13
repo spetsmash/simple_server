@@ -5,7 +5,7 @@ var models = require('../models/index');
 var question = require('../misc/questions');
 const sgMail = require('@sendgrid/mail');
 
-const token = '625299835:AAGDfwX-S7cryEth1ZGXgked7ZXWs21-Gro';
+const token = '671044975:AAHV3-B00DjFZxsxolvlB-P1w981RHf-f_o';
 const bot = new TelegramBot(token, {polling: true});
 
 sgMail.setApiKey('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');
@@ -84,7 +84,7 @@ function newQuestion(msg, index){
             models.User
                 .update({balance: 100}, {where: {chatId: chat}})
                 .spread((user, created) => {
-                    ask(msg, 'Please ENTER your EMAIL so that we can send you your tokens and the latest Usinvestorsnotallowed updates! ✉️ \n' +
+                    ask(msg, 'Please ENTER your EMAIL so that we can send you your tokens and the latest TOKEN updates! ✉️ \n' +
                         'You can CONFIRM it LATER.');
                 });
             break;

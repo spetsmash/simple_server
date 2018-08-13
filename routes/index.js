@@ -12,32 +12,33 @@ sgMail.setApiKey('SG.Omkb3MmWRR-_TCTyylTLwg.N4EAYAUlUK35plOVEpRlmfaolDdXpl0iQe_5
 
 
 
-
 bot.onText(/\/start/, function (msg, match) {
     const chatId = msg.chat.id;
     console.log(msg);
     models.User
         .findOrCreate({where: {chatId: msg.chat.id}, defaults: { login: msg.chat.first_name, step: 0, userId: msg.from.id }})
         .spread((user, created) => {
-            if (created) {
-                console.log('user - ' + user);
-                models.User.findOne({ where: {chatId: msg.chat.id} }).then(project => {
+        if (!created) {
+        console.log('user - ' + user);
+        models.User.findOne({ where: {chatId: msg.chat.id} }).then(project => {
 
-                    const step = project.dataValues.step;
-                    if (step === 0) {
-                        newQuestion(msg, 0);
-                    } else if (step > 0) {
-                        newQuestion(msg, project.dataValues.step);
-                    }
-                });
-                //bot.sendMessage(chatId, 'Hello! Let\'s proceed! ' + chatId);
-            } else  {
+            const step = project.dataValues.step;
+        if (step === 0) {
+            newQuestion(msg, 0);
+        }
+        else if (step > 0 && step !== 6) {
+            newQuestion(msg, project.dataValues.step);
+        }
 
-                // bot.sendMessage(chatId, 'Hello new one! ' + chatId);
-                newQuestion(msg, 0);
-            }
-            // console.log(created)
-        });
+    });
+        //bot.sendMessage(chatId, 'Hello! Let\'s proceed! ' + chatId);
+    } else  {
+
+        // bot.sendMessage(chatId, 'Hello new one! ' + chatId);
+        newQuestion(msg, 0);
+    }
+    // console.log(created)
+});
 
 });
 

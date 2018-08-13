@@ -21,7 +21,7 @@ var questions = {
     3: {
         title: 'Now, please follow us on Twitter.',
         buttons: [
-            [{text: 'Follow us on Twitter', url: "https://www.linkedin.com/company/actfoundation/"}],
+            [{text: 'Follow us on Twitter', url: "https://twitter.com/tokenttt"}],
             [{text: 'Tap here after following us!', callback_data: '3_2'}],
         ],
         right_answer: 2

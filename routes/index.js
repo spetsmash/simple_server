@@ -279,7 +279,7 @@ router.get('/verify',function(req,res){
     // console.log(req.protocol+":/"+req.get('host'));
     // console.log(req);
     // console.log(req.query.email);
-    if((req.protocol+"://"+req.get('host')) == ("https://34.245.133.13:3000"))
+    if((req.protocol+"://"+req.get('host')) == ("http://34.245.133.13:3000"))
     {
         console.log("Domain is matched. Information is from Authentic email");
         models.User.findOne({ where: {email: req.query.email} }).then(project => {

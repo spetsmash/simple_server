@@ -289,7 +289,7 @@ router.get('/verify',function(req,res){
                     .update({verification: true, balance: +project.dataValues.balance + 100}, {where: {email: req.query.email}})
                     .spread((user, created) => {
                         console.log("email is verified");
-                        res.end("<h1>Email is been Successfully verified");
+                        res.end("<h1>Email is been Successfully verified</h1>");
                     });
 
             }

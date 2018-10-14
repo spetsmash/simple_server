@@ -1,23 +1,23 @@
-{
-  "development": {
-    "username": "postgres",
-    "password": "q54fgfnmvbsewse#$",
-    "database": "bot_db",
-    "host": "34.245.133.13",
-    "dialect": "postgres"
-  },
-  "test": {
-    "username": "postgres",
-    "password": "q54fgfnmvbsewse#$",
-    "database": "bot_db",
-    "host": "34.245.133.13",
-    "dialect": "postgres"
-  },
-  "production": {
-    "username": "postgres",
-    "password": "q54fgfnmvbsewse#$",
-    "database": "bot_db",
-    "host": "34.245.133.13",
-    "dialect": "postgres"
-  }
-}
+//{
+//  "development": {
+//    "username": "postgres",
+//    "password": "q54fgfnmvbsewse#$",
+//    "database": "bot_db",
+//    "host": "34.245.133.13",
+//    "dialect": "postgres"
+//  },
+//  "test": {
+//    "username": "postgres",
+//    "password": "q54fgfnmvbsewse#$",
+//    "database": "bot_db",
+//    "host": "34.245.133.13",
+//    "dialect": "postgres"
+//  },
+//  "production": {
+//    "username": "postgres",
+//    "password": "q54fgfnmvbsewse#$",
+//    "database": "bot_db",
+//    "host": "34.245.133.13",
+//    "dialect": "postgres"
+//  }
+//}

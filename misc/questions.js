@@ -18,11 +18,19 @@ var questions = {
         ],
         right_answer: 2
     },
-    3: {
+    2: {
+        title: 'Follow our telegram channel for alerts about new projects!',
+        buttons: [
+            [{text: 'Joining the Channel', url: "https://t.me/usinvestorsnotallowed"}],
+            [{text: 'Tap here after joining us!', callback_data: '2_2'}],
+        ],
+        right_answer: 2
+    },
+    4: {
         title: 'Now, please follow us on Twitter.',
         buttons: [
             [{text: 'Follow us on Twitter', url: "https://twitter.com/tokenttt"}],
-            [{text: 'Tap here after following us!', callback_data: '3_2'}],
+            [{text: 'Tap here after following us!', callback_data: '4_2'}],
         ],
         right_answer: 2
     }

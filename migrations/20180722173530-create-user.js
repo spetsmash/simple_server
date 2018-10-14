@@ -1,45 +1,45 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Users', {
+    return queryInterface.createTable('Article', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-        chatId: {
-            type: Sequelize.INTEGER
+        date: {
+            type: Sequelize.STRING
         },
-        step: {
-          type: Sequelize.INTEGER
+        title: {
+          type: Sequelize.STRING
         },
-        userId: {
-          type: Sequelize.INTEGER
+        text: {
+          type: Sequelize.STRING
         },
-      login: {
+      type: {
         type: Sequelize.STRING
-      },
-      email: {
-        type: Sequelize.STRING
-      },
-        twitter: {
-            type: Sequelize.STRING
-        },
-        ethereumAddress: {
-            type: Sequelize.STRING
-        },
-        balance: {
-            type: Sequelize.STRING
-        },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
       }
+      // email: {
+      //   type: Sequelize.STRING
+      // }
+      //   twitter: {
+      //       type: Sequelize.STRING
+      //   },
+      //   ethereumAddress: {
+      //       type: Sequelize.STRING
+      //   },
+      //   balance: {
+      //       type: Sequelize.STRING
+      //   },
+      // createdAt: {
+      //   allowNull: false,
+      //   type: Sequelize.DATE
+      // },
+      // updatedAt: {
+      //   allowNull: false,
+      //   type: Sequelize.DATE
+      // }
     });
   },
   down: (queryInterface, Sequelize) => {

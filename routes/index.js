@@ -10,8 +10,12 @@ var router = express.Router();
 // });
 
 router.get('/test', function(req, res, next) {
-    res.send('simple');
+    res.json('This is CORS-enabled for a Single Route');
 });
+
+// router.post('/test', function(req, res, next) {
+//     res.json('This is CORS-enabled for a Single Route');
+// });
 
 // var question = require('../misc/questions');
 // const sgMail = require('@sendgrid/mail');
